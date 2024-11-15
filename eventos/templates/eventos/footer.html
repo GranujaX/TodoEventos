@@ -1,0 +1,64 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href='{% static "css/footer.css" %}'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+    </head>
+
+    <body>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-row">
+                    <div class="footer-links">
+                        <h4>Compañia</h4>
+                        <ul>
+                            <li><a href="#">Nosotros</a></li>
+                            <li><a href="#">Nuestros servicios</a></li>
+                            <li><a href="#">Politica de privacidad</a></li>
+                            <li><a href="{% url 'register_user'  %}">Crea una cuenta!</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Ayuda</h4>
+                        <ul>
+                            <li><a href="#">Preguntas</a></li>
+                            <li><a href="#">Compras</a></li>
+                            <li><a href="#">Reclamos</a></li>
+                            <li><a href="#">Chat</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Tienda</h4>
+                        <ul>
+                            <li><a href="#">Entrada</a></li>
+                            <li><a href="#">Consumibles</a></li>
+                            <li><a href="#">Paquetes</a></li>
+                            <li><a href="#">Asesoria</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Siguenos</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/cysa.team/"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+
+    </body>
+
+</hmtl>

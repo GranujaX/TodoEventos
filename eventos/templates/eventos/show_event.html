@@ -1,0 +1,38 @@
+{% extends 'eventos/base.html' %}
+
+
+{% block content %}
+
+    <center>
+
+           
+       
+    </center>
+
+    <div class="card">
+        <div class="card-header">
+            <strong>  {{ event }} </strong>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"> lugar: {{ event.venue }} </h5>
+          <p class="card-text"><ul>
+    
+            <li>Fecha: {{ event.event_date }} </li>
+            <li>Conpañia: {{ event.company }} </li>
+            <li>Direccion: {{ event.venue.address }} </li>
+            <br/>
+            
+            </ul></p>
+    
+        </div>
+      </div>
+
+
+
+
+
+{% endblock %}
+
+   
+
+

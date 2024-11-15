@@ -1,0 +1,46 @@
+{% extends 'eventos/base.html' %}
+
+
+{% block content %}
+ 
+
+<div class="container">
+<h1>Eventos</h1> 
+<a href="{% url 'download_pdf_report' %}" class="btn btn-primary">Descargar Reporte en PDF</a>
+<a href="{% url 'download_excel_report' %}" class="btn btn-primary">Descargar Reporte en EXCEL</a>
+<br/><br/>
+
+{% for event in event_list %}
+<div class="card">
+    <div class="card-header">
+        <strong><a href="{% url 'show_event' event.id %}"> {{ event }} </a> </strong>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"> lugar: {{ event.venue }} </h5>
+      <p class="card-text"><ul>
+
+        <li>fecha: {{ event.event_date }} </li>
+     
+        <li>organizador: {{ event.company }} </li>
+        <li>descripcion: {{ event.description }} </li>
+        <li> Asistentes:<br/>
+        {% for user in event.attendees.all %}
+              {{ user }}<br/>
+        {% endfor %}
+        </li>
+        </ul></p>
+
+    </div>
+    <div class="card-footer text-body-secondary">
+      {% if user.is_authenticated %}
+          <a href="{% url 'update_event' event.id %}" class="btn btn-outline-secondary btn-sm">Actualizar evento</a>
+          <a href="{% url 'delete_event' event.id %}" class="btn btn-outline-danger btn-sm">Eliminar evento</a>
+      {% endif %}
+      <a href="{% url 'show_map' event.venue.id %}" class="btn btn-outline-info btn-sm">Mostrar en el mapa</a>
+  </div>
+  </div>
+   <br/><br/>
+{% endfor %}
+</div>
+
+{% endblock %}

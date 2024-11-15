@@ -1,0 +1,15 @@
+{% extends 'eventos/base.html' %}
+
+{% block content %}
+    <center>
+        {% if searched %}
+            <h1>Buscaste: {{ searched }}</h1>
+            <br/>
+            {% for result, result_type in results %}
+                <a href="{% if result_type == 'Venue' %}{% url 'show_venue' result.id %}{% elif result_type == 'Event' %}{% url 'show_event' result.id %}{% endif %}">{{ result }}</a><br/>
+            {% endfor %}
+        {% else %}
+            <h1>Busca un evento</h1>
+        {% endif %}
+    </center>
+{% endblock %}

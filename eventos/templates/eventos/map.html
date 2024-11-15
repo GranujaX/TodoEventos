@@ -1,0 +1,18 @@
+
+{% extends 'eventos/base.html' %}
+
+
+{% block content %}
+ 
+
+
+<iframe
+  width="1800"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDDmNlCxUaPrnv-pgCY_gYEKApbu7A1sm8&q={{ direccion|urlencode }}">
+</iframe>
+
+{% endblock %}

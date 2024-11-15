@@ -1,0 +1,149 @@
+{% extends 'eventos/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href='{% static "css/home.css" %}'>
+    <title>Eventos Destacados · Tu Ciudad</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"  rel="stylesheet">
+    <link href='{% static "css/carousel.css" %}' rel="stylesheet">
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+      }
+      .carousel-caption h1, .carousel-caption p {
+        color: #fff;
+      }
+      .carousel-control-prev-icon, .carousel-control-next-icon {
+        filter: invert(1);
+      }
+    </style>
+  </head>
+  <body>
+
+    <main>
+
+      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://www.renunciamosyviajamos.com/wp-content/uploads/2014/10/Medell%C3%ADn-nocturna-Renunciamos-y-Viajamos-8.jpg" class="d-block w-100" alt="Imagen de Medellín">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#333"/></svg>
+            <div class="container">
+              <div class="carousel-caption text-start">
+                <h1>¡Eventos Exclusivos!</h1>
+                <p class="opacity-75">Vive experiencias únicas en los mejores lugares de la ciudad.</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Explora más</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.infobae.com/resizer/v2/I2LKU4ZQIJEQJIXFBPYZ5GWLQ4.png?auth=5b530af082534c97bf58e97207e4812af538ab40c3f163f3cdca0819ce6f198c&smart=true&width=992&height=558&quality=85" class="d-block w-100" alt="Imagen de Medellín">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#333"/></svg>
+            <div class="container">
+              <div class="carousel-caption">
+
+                <h1>Conciertos & Festivales</h1>
+                <p>Descubre eventos musicales en vivo y festivales inolvidables.</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Ver más</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://i0.wp.com/portalcanaa.com.br/wp-content/uploads/2024/05/festival-gastronomico-hoje.jpeg?resize=768%2C512&ssl=1" class="d-block w-100" alt="Imagen de Medellín">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#333"/></svg>
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>Eventos Gastronómicos</h1>
+                <p>Degusta lo mejor de la cocina local e internacional en eventos especiales.</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Conoce más</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="container marketing">
+        <div class="row">
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#555"/></svg>
+            <h2 class="fw-normal">Concierto Épico</h2>
+            <p>Únete a un espectáculo de música en vivo con artistas internacionales.</p>
+            <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
+          </div>
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#555"/></svg>
+            <h2 class="fw-normal">Festival Gastronómico</h2>
+            <p>Explora una variedad de sabores y aromas en un evento culinario inolvidable.</p>
+            <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
+          </div>
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#555"/></svg>
+            <h2 class="fw-normal">Feria de Arte</h2>
+            <p>Sumérgete en el mundo del arte contemporáneo con exhibiciones y talleres.</p>
+            <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">Vive la Cultura. <span class="text-body-secondary">Experiencias que inspiran.</span></h2>
+            <p class="lead">Disfruta de eventos únicos que te acercarán a lo mejor de la cultura y el arte.</p>
+          </div>
+          <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#555"/></svg>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Para los Amantes del Sabor. <span class="text-body-secondary">Descubre, saborea y celebra.</span></h2>
+            <p class="lead">Deléitate con una muestra culinaria sin igual en eventos gastronómicos seleccionados.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#555"/></svg>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">La Magia del Arte. <span class="text-body-secondary">Inspírate.</span></h2>
+            <p class="lead">Sumérgete en un mundo de creatividad y expresión con eventos artísticos especiales.</p>
+          </div>
+          <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#555"/></svg>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </body>
+</html>
+{% endblock %}

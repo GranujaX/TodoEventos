@@ -1,0 +1,83 @@
+{% load static %}
+{% block content %}
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loggin</title>
+  <link rel="stylesheet" href='{% static "css/register.css" %}'>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+  {% if form.errors %}
+  <p>Hubo un error </p>
+
+  {% endif %}
+
+  <div class="container">
+    <br/>
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endfor %}
+    {% endif %}
+  <br/>
+  </div>
+
+
+  <div class="wrapper">
+    <form action="{% url 'register_user' %}" method=POST>
+      {% csrf_token %}
+      <a href="{% url 'home' %}">&#8592; Volver a la página de inicio</a>
+      <h1>Registrate</h1>
+      <div class="input-box">
+  
+      </div>
+      <div class="input-box">
+        <label for="{{ form.usename.label }}">Nombre de usuario</label>
+        {{form.username}}
+      </div>
+      <div class="input-box">
+        <label for="{{ form.first_name.label }}">Nombre</label>
+        {{form.first_name}}
+      </div>
+
+      <div class="input-box">
+        <label for="{{ form.email.label }}">Email</label>
+        {{form.email}}
+      </div>
+
+      <div class="input-box">
+        <label for="{{ form.phone_number.label }}">Celular</label>
+         {{form.phone_number}}
+      </div>
+
+      <div class="input-box">
+        <label for="{{ form.password1.label }}">Contraseña</label>
+        {{form.password1}}
+      </div>
+
+      <div class="input-box">
+      <label for="{{ form.password2.label }}">Confirma la Contraseña</label>
+       {{form.password2}}
+      </div>
+
+      <button type="submit" class="btn">Registrarme</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
+{% endblock %}
+
+
+
+
+

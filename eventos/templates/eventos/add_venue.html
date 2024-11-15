@@ -1,0 +1,32 @@
+{% extends 'eventos/base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+
+    <h1>Añadir un lugar</h1>
+    <br/><br/>
+
+    {% if submitted %}
+    
+        Ya se agrego tu lugar
+
+    {% else %}
+
+    <form action="" method=POST>
+        {% csrf_token %}
+        {{ form.as_p}}
+        <input type="submit" value="submit" class="btn btn-success">
+    </form>
+
+    {% endif %}
+
+</div>
+
+
+{% endblock %}
+
+   
+
+
